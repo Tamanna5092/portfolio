@@ -8,6 +8,8 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
+import Marquee from "react-fast-marquee";
+import { skills } from "../Shared/SkillsIcon";
 
 const About = () => {
   return (
@@ -29,6 +31,22 @@ const About = () => {
           applications. I specialize in creating responsive and interactive user
           interfaces using modern JavaScript frameworks and libraries.
         </p>
+        <div className="px-4 mb-6">
+    <Marquee pauseOnHover={true} direction="right">
+        <ul className="flex items-center overflow-hidden">
+          {skills.map(({ icon: Icon, color}, index) => (
+            <li
+              key={index}
+              className="p-2 bg-[#f3f1f1] border hover:border hover:border-[#facc15] transition-transform duration-300 rounded-md mx-4"
+            >
+              <Icon
+                className={`${color} w-6 h-6 hover:scale-125 transition-transform duration-300`}
+              />
+            </li>
+          ))}
+        </ul>
+      </Marquee>
+          </div>
         <div className="flex space-x-4">
           <a href="https://drive.google.com/file/d/1WbfcLmNHo5Frd8Hg7HNiK0dGijU4I2yv/view?usp=sharing" className="flex justify-center items-center gap-2 bg-[#facc15] text-white px-4 py-2">
             <span>
