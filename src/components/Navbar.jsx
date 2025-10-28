@@ -25,12 +25,12 @@ const Navbar = () => {
       path: "/about",
     },
     {
-      title: "Project",
-      path: "/project",
+      title: "Skills",
+      path: "/skills",
     },
     {
-      title: "Skill",
-      path: "/skill",
+      title: "Project",
+      path: "/project",
     },
     {
       title: "Interest",
@@ -43,7 +43,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="relative shadow-lg dark:shadow-2xl border border-[#fde047] py-3 px-4">
+    <div className="relative shadow-lg border border-[#fde047] py-3 px-4">
       <div className="flex justify-between">
         <div className="logo">
           <div className="flex items-center gap-1">
