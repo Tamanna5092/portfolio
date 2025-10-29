@@ -22,23 +22,23 @@ const Navbar = () => {
   const navlinks = [
     {
       title: "About",
-      path: "/about",
+      path: "about",
     },
     {
       title: "Skills",
-      path: "/skills",
+      path: "skills",
     },
     {
       title: "Project",
-      path: "/project",
+      path: "project",
     },
     {
-      title: "Interest",
-      path: "/interest",
+      title: "Career",
+      path: "career",
     },
     {
       title: "Contact",
-      path: "/contact",
+      path: "contact",
     },
   ];
 
@@ -59,7 +59,10 @@ const Navbar = () => {
         <div className="hidden sm:flex justify-center items-center">
           <ul className="flex gap-4">
             {navlinks.map((navlink) => (
-              <li className="hover:text-[#facc15] transition duration-300" key={navlink.path}>
+              <li
+                className="hover:text-[#facc15] transition duration-300"
+                key={navlink.path}
+              >
                 <Link to={`${navlink.path}`}>{navlink.title}</Link>
               </li>
             ))}
