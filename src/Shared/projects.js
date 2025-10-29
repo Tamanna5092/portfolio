@@ -5,7 +5,7 @@ export const projects = [
     description:
       "In this Real Estate project, users can explore detailed information about various houses available for rent and purchase. I implemented a secure login and sign-up system using Firebase Authentication. Additionally, I added a Blog Section where users can read informative articles related to real estate. Each blog also includes its own details page for a better reading experience.",
     technologies: ["React", "Firebase", "Tailwind CSS"],
-    image: "https://i.ibb.co.com/LzGTtg4f/real-state.png",
+    image: "https://i.ibb.co.com/5X2150fm/real-state1.png",
     liveDemo: "https://real-estate-88042.web.app/",
     frontend: "https://github.com/Tamanna5092/real-estate",
     backend: "https://github.com/Tamanna5092/real-estate",
@@ -22,7 +22,7 @@ export const projects = [
       "MongoDB",
       "Express.js",
     ],
-    image: "https://i.ibb.co.com/BV8HbjkD/tourist.png",
+    image: "https://i.ibb.co.com/tFFn72Q/tourisom.png",
     liveDemo: "https://starshelter-tourism.web.app/",
     frontend: "https://github.com/Tamanna5092/tourism-management-client",
     backend: "https://github.com/Tamanna5092/tourism-management-server",

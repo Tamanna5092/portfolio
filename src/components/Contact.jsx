@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { IoIosSend } from "react-icons/io";
 import {
   IoCallOutline,
   IoLocationOutline,
@@ -15,10 +16,67 @@ const Contact = () => {
       </h1>
       <div className="w-52 h-[2px] bg-[#facc15] mx-auto mt-2 mb-6 rounded-full"></div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <div></div>
+        {/* form */}
+        <div>
+          <form>
+            <div>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                    className="w-full border p-2 outline-[#facc15] shadow-"
+                  />
+                </div>
+                <div>
+                  <input
+                    name="email"
+                    type="text"
+                    placeholder="Email"
+                    className="w-full border p-2 outline-[#facc15]"
+                  />
+                </div>
+                <div>
+                  <input
+                    name="phone"
+                    type="text"
+                    placeholder="Phone"
+                    className="w-full border p-2 outline-[#facc15]"
+                  />
+                </div>
+                <div>
+                  <input
+                    name="subject"
+                    type="text"
+                    placeholder="Subject"
+                    className="w-full border p-2 outline-[#facc15]"
+                  />
+                </div>
+              </div>
+              <div className="mt-6">
+                <textarea
+                  name="message"
+                  rows={4}
+                  placeholder="Your message"
+                  className="w-full p-2 border"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="flex justify-center mt-4">
+              <button className="flex justify-center items-center gap-2 bg-[#facc15] text-white px-4 py-2">
+                <span>
+                  <IoIosSend  />
+                </span>{" "}
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
         {/* contact info */}
         <div>
-          <div className="border-l-2 border-[#facc15] rounded-lg px-4 my-6">
+          <div className="border-l-2 border-[#facc15] rounded-lg px-4">
             <div className="flex items-center gap-6">
               <span className="p-2 bg-[#f3f1f1] border hover:border hover:border-[#facc15] transition-transform duration-300 rounded-md">
                 <IoCallOutline className="w-6 h-6 text-[#facc15] hover:text-black" />

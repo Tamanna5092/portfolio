@@ -31,7 +31,7 @@ const About = () => {
           applications. I specialize in creating responsive and interactive user
           interfaces using modern JavaScript frameworks and libraries.
         </p>
-        <div className="px-4 mb-6">
+        <div className="mb-6">
     <Marquee pauseOnHover={true} direction="right">
         <ul className="flex items-center overflow-hidden">
           {skills.map(({ icon: Icon, color}, index) => (

@@ -29,12 +29,12 @@ const Navbar = () => {
       path: "skills",
     },
     {
-      title: "Project",
-      path: "project",
-    },
-    {
       title: "Career",
       path: "career",
+    },
+    {
+      title: "Project",
+      path: "project",
     },
     {
       title: "Contact",
