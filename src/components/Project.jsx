@@ -4,7 +4,7 @@ import { projects } from "../Shared/projects";
 
 const Project = () => {
   return (
-    <div className="shadow-lg border border-[#fde047] py-3 px-4 mt-10">
+    <div id="project" className="shadow-lg border border-[#fde047] py-3 px-4 mt-10">
       <h1 className="text-center text-3xl font-semibold font-roboto mt-6">
         Projects
       </h1>

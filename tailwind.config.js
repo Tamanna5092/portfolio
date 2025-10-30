@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  // darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -7,6 +8,12 @@ export default {
         roboto: ["Roboto Mono", "monospace"],
         lora: ["Lora", "serif"],
       },
+      // colors: {
+      //   primaryYellow: "#facc15",
+      //   secondaryYellow: "#fde047",
+      //   bgLight: "#fef9f3",
+      //   bgDark: "#1a1a1a",
+      // },
     },
   },
   plugins: [require("daisyui")],

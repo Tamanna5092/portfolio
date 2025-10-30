@@ -13,7 +13,7 @@ import { skills } from "../Shared/SkillsIcon";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-1 gap-6 mt-10 shadow-lg border border-[#fde047] py-3 px-4 md:grid-cols-2">
+    <div id="about" className="grid grid-cols-1 gap-6 mt-10 shadow-lg border border-[#fde047] py-3 px-4 md:grid-cols-2">
       <div className="flex justify-center items-center p-6 md:p-10">
         <img
           className="w-96 rounded-full border-4 border-[#facc15] hover:scale-105 duration-300 hover:brightness-75"
@@ -48,13 +48,13 @@ const About = () => {
       </Marquee>
           </div>
         <div className="flex space-x-4">
-          <a href="https://drive.google.com/file/d/1WbfcLmNHo5Frd8Hg7HNiK0dGijU4I2yv/view?usp=sharing" className="flex justify-center items-center gap-2 bg-[#facc15] text-white px-4 py-2">
+          <a href="https://drive.google.com/file/d/1WbfcLmNHo5Frd8Hg7HNiK0dGijU4I2yv/view?usp=sharing" className="flex justify-center items-center gap-2 bg-[#facc15] text-white hover:scale-105 transition-all duration-300 px-4 py-2">
             <span>
               <MdOutlineFileDownload />
             </span>
             Download CV
           </a>
-          <button className="flex justify-center items-center gap-2 bg-[#facc15] text-white px-4 py-2">
+          <button className="flex justify-center items-center gap-2 bg-[#facc15] text-white  hover:scale-105 transition-all duration-300 px-4 py-2">
             <span>
               <FaArrowRight />
             </span>{" "}

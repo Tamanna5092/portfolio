@@ -6,9 +6,9 @@ import {
   FaJs,
   FaNodeJs,
   FaReact,
-  FaTools,
 } from "react-icons/fa";
-import { SiFirebase, SiMongodb, SiTailwindcss } from "react-icons/si";
+import { PiDesktopTowerLight } from "react-icons/pi";
+import { SiFigma, SiFirebase, SiMongodb, SiTailwindcss } from "react-icons/si";
 
 export const skills = [
   { name: "HTML", level: 95, icon: FaHtml5, color: "text-orange-500" },
@@ -31,10 +31,11 @@ export const skills = [
     icon: FaGithub,
     color: "text-gray-800 dark:text-white",
   },
+  { name: "Figma", level: 65, icon: SiFigma, color: "text-pink-500" },
   {
     name: "Responsive Design",
     level: 90,
-    icon: FaTools,
+    icon: PiDesktopTowerLight,
     color: "text-purple-500",
   },
 ];

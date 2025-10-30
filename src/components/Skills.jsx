@@ -1,12 +1,20 @@
+import { CgWebsite } from "react-icons/cg";
 import { skills } from "../Shared/SkillsIcon";
+import { AiOutlineDatabase } from "react-icons/ai";
+import { FaTools } from "react-icons/fa";
+import { LiaToolsSolid } from "react-icons/lia";
 
 const Skills = () => {
   return (
-    <div className="shadow-lg border border-[#fde047] py-3 px-4 mt-10">
+    <div
+      id="skills"
+      className="shadow-lg border border-[#fde047] py-3 px-4 mt-10"
+    >
       <h1 className="text-center text-3xl font-semibold font-roboto mt-6">
         My Skills
       </h1>
       <div className="w-52 h-[2px] bg-[#facc15] mx-auto mt-2 mb-6 rounded-full"></div>
+      {/* skill card */}
       <div className="grid grid-cols-1 gap-6 my-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {skills.map(({ icon: Icon, name, level, color }, index) => (
           <div
@@ -30,6 +38,102 @@ const Skills = () => {
             </div>
           </div>
         ))}
+      </div>
+      {/* skills card */}
+      <div className="grid grid-cols-1 gap-6 mt-20 mb-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="border border-green-200 rounded-lg shadow-md">
+          <div className="flex flex-col justify-center items-center mt-6">
+            <span>
+              <CgWebsite className="w-8 h-8" />
+            </span>
+            <h2 className="font-bold font-roboto text-xl text-center mt-4">
+              Frontend Development
+            </h2>
+          </div>
+          <div className="p-6">
+            {skills.slice(0, 5).map((skill, index) => (
+              <div
+                key={index}
+                className="grid grid-cols-2 gap-2 mt-4 md:gap-4"
+              >
+                <div>
+                  <h4>{skill.name}</h4>
+                </div>
+                <div className="flex items-center gap-6">
+                  <div className="w-2/3 mx-auto h-2 bg-[#f3f1f1] rounded-full">
+                    <div
+                      className="h-2 bg-[#fde047] rounded-full"
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                  <span>{skill.level}%</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="border border-violet-200 rounded-lg shadow-md">
+          <div className="flex flex-col justify-center items-center mt-6">
+            <span>
+              <AiOutlineDatabase className="w-8 h-8" />
+            </span>
+            <h2 className="font-bold font-roboto text-xl text-center mt-4">
+              Backend Development
+            </h2>
+          </div>
+          <div className="p-6">
+            {skills.slice(5, 8).map((skill, index) => (
+              <div
+                key={index}
+                className="grid grid-cols-2 gap-2 mt-4 md:gap-4"
+              >
+                <div>
+                  <h4>{skill.name}</h4>
+                </div>
+                <div className="flex items-center gap-6">
+                  <div className="w-2/3 mx-auto h-2 bg-[#f3f1f1] rounded-full">
+                    <div
+                      className="h-2 bg-[#fde047] rounded-full"
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                  <span>{skill.level}%</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="border border-cyan-200 rounded-lg shadow-md">
+          <div className="flex flex-col justify-center items-center mt-6">
+            <span>
+              <LiaToolsSolid className="w-8 h-8" />
+            </span>
+            <h2 className="font-bold font-roboto text-xl text-center mt-4">
+              Tools & Design
+            </h2>
+          </div>
+          <div className="p-6">
+            {skills.slice(8, 11).map((skill, index) => (
+              <div
+                key={index}
+                className="grid grid-cols-2 gap-2 mt-4 md:gap-4"
+              >
+                <div>
+                  <h4>{skill.name}</h4>
+                </div>
+                <div className="flex items-center gap-6">
+                  <div className="w-2/3 mx-auto h-2 bg-[#f3f1f1] rounded-full">
+                    <div
+                      className="h-2 bg-[#fde047] rounded-full"
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                  <span>{skill.level}%</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

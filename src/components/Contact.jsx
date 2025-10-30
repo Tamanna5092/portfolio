@@ -10,12 +10,12 @@ import {
 
 const Contact = () => {
   return (
-    <div className="shadow-lg border border-[#fde047] py-3 px-4 mt-10">
+    <div id="contact" className="shadow-lg border border-[#fde047] py-3 px-4 mt-10">
       <h1 className="text-center text-3xl font-semibold font-roboto mt-6">
         Get In Touch
       </h1>
       <div className="w-52 h-[2px] bg-[#facc15] mx-auto mt-2 mb-6 rounded-full"></div>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6  md:grid-cols-2">
         {/* form */}
         <div>
           <form>
@@ -64,8 +64,8 @@ const Contact = () => {
               </div>
             </div>
 
-            <div class="flex justify-center mt-4">
-              <button className="flex justify-center items-center gap-2 bg-[#facc15] text-white px-4 py-2">
+            <div className="flex justify-center mt-4">
+              <button className="flex justify-center items-center gap-2 bg-[#facc15] text-white hover:scale-105 transition-all duration-300 px-4 py-2">
                 <span>
                   <IoIosSend  />
                 </span>{" "}
@@ -94,7 +94,7 @@ const Contact = () => {
               </span>
               <div>
                 <p>Email</p>
-                <p className="font-roboto font-medium">
+                <p className="font-roboto font-medium break-all">
                   tamannaaktermoni51@gmail.com
                 </p>
               </div>

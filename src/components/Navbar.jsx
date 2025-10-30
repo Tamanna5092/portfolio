@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaRegMoon } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
 import { IoClose, IoMenuSharp } from "react-icons/io5";
 import { TiWeatherSunny } from "react-icons/ti";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
@@ -13,10 +13,19 @@ const Navbar = () => {
     setOpenMenu((open) => !open);
   };
 
+  useEffect(()=> {
+    const saveTheme = localStorage.getItem("theme")
+    if(saveTheme){
+      setTheme(saveTheme)
+      document.documentElement.setAttribute("data-theme", saveTheme)
+    }
+  }, [])
+
   const handleThemeToggle = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme)
   };
 
   const navlinks = [
@@ -50,7 +59,7 @@ const Navbar = () => {
             <span>
               <FaCode className="w-6 h-6" />
             </span>
-            <h2 className="font-roboto text-2xl font-semibold text-[#facc15] dark:text-[#fde047]">
+            <h2 className="font-roboto text-2xl font-semibold text-[#facc15]">
               {" "}
               Tamanna
             </h2>
@@ -60,10 +69,17 @@ const Navbar = () => {
           <ul className="flex gap-4">
             {navlinks.map((navlink) => (
               <li
-                className="hover:text-[#facc15] transition duration-300"
+                className="hover:text-[#facc15] transition duration-300 cursor-pointer"
                 key={navlink.path}
               >
-                <Link to={`${navlink.path}`}>{navlink.title}</Link>
+                <Link
+                  to={`${navlink.path}`}
+                  smooth={true}
+                  duration={600}
+                  offset={-40}
+                >
+                  {navlink.title}
+                </Link>
               </li>
             ))}
           </ul>
@@ -99,10 +115,17 @@ const Navbar = () => {
           <ul className="flex flex-col">
             {navlinks.map((navlink) => (
               <li
-                className="my-1 px-10 hover:bg-[#facc15] rounded-2xl py-1 transition duration-300"
+                className="my-1 px-10 hover:bg-[#facc15] rounded-2xl py-1 transition duration-300 cursor-pointer"
                 key={navlink.path}
               >
-                <Link to={`${navlink.path}`}>{navlink.title}</Link>
+                <Link
+                  to={`${navlink.path}`}
+                  smooth={true}
+                  duration={600}
+                  offset={-40}
+                >
+                  {navlink.title}
+                </Link>
               </li>
             ))}
           </ul>

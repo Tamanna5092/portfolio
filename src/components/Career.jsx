@@ -4,7 +4,7 @@ import { PiGraduationCapDuotone } from "react-icons/pi";
 
 const Career = () => {
   return (
-    <div className="shadow-lg border border-[#fde047] py-3 px-4 mt-10">
+    <div id="career" className="shadow-lg border border-[#fde047] py-3 px-4 mt-10">
       <h1 className="text-center text-3xl font-semibold font-roboto mt-6">
         Experience & Education
       </h1>
@@ -59,7 +59,7 @@ const Career = () => {
             <h2 className="text-lg font-medium">
               Secondary School Certificate (SSC)
             </h2>
-            <h3 className="font-medium">Kazi Azim Uddin College</h3>
+            <h3 className="font-medium">I E S School & College</h3>
             <p>Group: Science</p>
             <p className="italic">Year of Passing: 2015-2020 </p>
           </div>
