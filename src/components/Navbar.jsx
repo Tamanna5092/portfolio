@@ -123,6 +123,7 @@ const Navbar = () => {
                   smooth={true}
                   duration={600}
                   offset={-40}
+                  onClick={() => setOpenMenu(false)}
                 >
                   {navlink.title}
                 </Link>

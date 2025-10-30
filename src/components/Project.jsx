@@ -4,7 +4,10 @@ import { projects } from "../Shared/projects";
 
 const Project = () => {
   return (
-    <div id="project" className="shadow-lg border border-[#fde047] py-3 px-4 mt-10">
+    <div
+      id="project"
+      className="shadow-lg border border-[#fde047] py-3 px-4 mt-10"
+    >
       <h1 className="text-center text-3xl font-semibold font-roboto mt-6">
         Projects
       </h1>
@@ -15,7 +18,7 @@ const Project = () => {
         <div key={project.id} className="border rounded-lg p-4 my-6">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {/* project image */}
-            <div className="">
+            <div data-aos="zoom-in" className="">
               <img
                 className="w-full h-full sm:h-80 lg:h-64 rounded-lg"
                 src={project.image}
@@ -27,10 +30,11 @@ const Project = () => {
               <h3 className="text-[#facc15] text-2xl font-roboto font-semibold">
                 {project.title}
               </h3>
-              <p className="my-4">{project.description.length > 200 ?
-              `${project.description.slice(0, 175)}...`
-              : project.description
-              }</p>
+              <p className="my-4">
+                {project.description.length > 200
+                  ? `${project.description.slice(0, 175)}...`
+                  : project.description}
+              </p>
               <div className="flex flex-row border-t-[1px] border-b-[1px] py-4">
                 <p className="font-roboto">Technologies:</p>
                 <p className="ml-2">{project.technologies.join(", ")}</p>

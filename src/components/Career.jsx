@@ -11,7 +11,7 @@ const Career = () => {
       <div className="w-52 sm:w-96 h-[2px] bg-[#facc15] mx-auto mt-2 mb-6 rounded-full"></div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {/* work section */}
-        <div>
+        <div data-aos="fade-left">
           <h2 className="flex items-center text-xl font-roboto font-semibold mb-2 gap-2">
             <FaBriefcase className="text-[#facc15]" /> Work
           </h2>
@@ -35,7 +35,7 @@ const Career = () => {
           </div>
         </div>
         {/* academic section */}
-        <div>
+        <div data-aos="fade-left">
           <h2 className="flex items-center text-xl font-roboto font-semibold mb-2 gap-2">
             <PiGraduationCapDuotone className="text-[#facc15]" /> Academic
             Achievment

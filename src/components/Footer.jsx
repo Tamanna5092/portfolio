@@ -1,8 +1,9 @@
 import React from "react";
 import { FaCode } from "react-icons/fa6";
-import { Link } from "react-scroll";
+import { Link } from "react-scroll"; 
 
-function Footer() {
+function Footer() { 
+
   const navlinks = [
     {
       title: "About",
@@ -28,7 +29,7 @@ function Footer() {
 
   return (
     <div className="shadow-lg border border-[#fde047] py-3 px-4 mt-10">
-      <div className="text-center">
+      <div  data-aos="zoom-in" className="text-center">
         <div className="flex items-center justify-center gap-1">
           <span>
             <FaCode className="w-6 h-6" />
@@ -57,10 +58,10 @@ function Footer() {
             ))}
           </ul>
         </div>
-        <div>
-          <p className="text-sm mt-2">Copyright © 2025 - All right reserved</p>
-        </div>
       </div>
+        <div>
+          <p className="text-sm mt-2 text-center">Copyright © 2025 - All right reserved</p>
+        </div>
     </div>
   );
 }

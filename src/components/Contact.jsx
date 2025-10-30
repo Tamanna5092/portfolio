@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import toast from "react-hot-toast";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
@@ -7,18 +8,40 @@ import {
   IoLocationOutline,
   IoMailOutline,
 } from "react-icons/io5";
+import { TbFidgetSpinner } from "react-icons/tb";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    const subject = form.subject.value;
+    const message = form.message.value;
+    console.log({ name, email, phone, subject, message });
+    setTimeout(() => {
+      setLoading(false);
+      toast.success("Message send successfully!");
+      form.reset()
+    }, 1000);
+  };
+
   return (
-    <div id="contact" className="shadow-lg border border-[#fde047] py-3 px-4 mt-10">
+    <div
+      id="contact"
+      className="shadow-lg border border-[#fde047] py-3 px-4 mt-10"
+    >
       <h1 className="text-center text-3xl font-semibold font-roboto mt-6">
         Get In Touch
       </h1>
       <div className="w-52 h-[2px] bg-[#facc15] mx-auto mt-2 mb-6 rounded-full"></div>
       <div className="grid grid-cols-1 gap-6  md:grid-cols-2">
         {/* form */}
-        <div>
-          <form>
+        <div data-aos="fade-right">
+          <form onSubmit={handleSubmit}>
             <div>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
@@ -26,6 +49,7 @@ const Contact = () => {
                     name="name"
                     type="text"
                     placeholder="Your name"
+                    required
                     className="w-full border p-2 outline-[#facc15] shadow-"
                   />
                 </div>
@@ -34,6 +58,7 @@ const Contact = () => {
                     name="email"
                     type="text"
                     placeholder="Email"
+                    required
                     className="w-full border p-2 outline-[#facc15]"
                   />
                 </div>
@@ -42,6 +67,7 @@ const Contact = () => {
                     name="phone"
                     type="text"
                     placeholder="Phone"
+                    required
                     className="w-full border p-2 outline-[#facc15]"
                   />
                 </div>
@@ -50,6 +76,7 @@ const Contact = () => {
                     name="subject"
                     type="text"
                     placeholder="Subject"
+                    required
                     className="w-full border p-2 outline-[#facc15]"
                   />
                 </div>
@@ -59,23 +86,39 @@ const Contact = () => {
                   name="message"
                   rows={4}
                   placeholder="Your message"
+                  required
                   className="w-full p-2 border"
                 ></textarea>
               </div>
             </div>
 
             <div className="flex justify-center mt-4">
-              <button className="flex justify-center items-center gap-2 bg-[#facc15] text-white hover:scale-105 transition-all duration-300 px-4 py-2">
-                <span>
+              <button
+                disabled={loading}
+                type="submit"
+                className="flex justify-center items-center gap-2 bg-[#facc15] text-white hover:scale-105 transition-all duration-300 px-4 py-2"
+              >
+                {/* <span>
                   <IoIosSend  />
                 </span>{" "}
-                Send Message
+                Send Message */}
+                {loading ? (
+                  <> <span><TbFidgetSpinner className="animate-spin" /></span> Loading...</>
+                ) :
+                 (<>
+                    <span>
+                      <IoIosSend />
+                    </span>
+                    Send Message
+                  </>
+                 
+                )}
               </button>
             </div>
           </form>
         </div>
         {/* contact info */}
-        <div>
+        <div data-aos="fade-left">
           <div className="border-l-2 border-[#facc15] rounded-lg px-4">
             <div className="flex items-center gap-6">
               <span className="p-2 bg-[#f3f1f1] border hover:border hover:border-[#facc15] transition-transform duration-300 rounded-md">

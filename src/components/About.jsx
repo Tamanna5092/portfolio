@@ -10,6 +10,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 import Marquee from "react-fast-marquee";
 import { skills } from "../Shared/SkillsIcon";
+import { Link } from "react-scroll";
 
 const About = () => {
   return (
@@ -17,8 +18,8 @@ const About = () => {
       <div className="flex justify-center items-center p-6 md:p-10">
         <img
           className="w-96 rounded-full border-4 border-[#facc15] hover:scale-105 duration-300 hover:brightness-75"
-          src="/src/assets/profile-image.jpg"
-          alt=""
+          src="/profile-image.jpg"
+          alt="Profile-image"
         />
       </div>
       <div className="flex flex-col justify-center">
@@ -54,14 +55,14 @@ const About = () => {
             </span>
             Download CV
           </a>
-          <button className="flex justify-center items-center gap-2 bg-[#facc15] text-white  hover:scale-105 transition-all duration-300 px-4 py-2">
+          <Link to="contact" className="flex justify-center items-center gap-2 bg-[#facc15] text-white cursor-pointer hover:scale-105 transition-all duration-300 px-4 py-2">
             <span>
               <FaArrowRight />
             </span>{" "}
             Hire Me
-          </button>
+          </Link>
         </div>
-        <div className="flex flex-row space-x-4 my-6">
+        <div data-aos="fade-up" className="flex flex-row space-x-4 my-6">
           <a
             className="hover:text-[#facc15] hover:scale-125 transition duration-300"
             href="https://github.com/Tamanna5092"
