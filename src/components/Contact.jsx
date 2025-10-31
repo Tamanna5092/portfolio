@@ -21,11 +21,11 @@ const Contact = () => {
     const phone = form.phone.value;
     const subject = form.subject.value;
     const message = form.message.value;
-    console.log({ name, email, phone, subject, message });
+    // console.log({ name, email, phone, subject, message });
     setTimeout(() => {
       setLoading(false);
       toast.success("Message send successfully!");
-      form.reset()
+      form.reset();
     }, 1000);
   };
 
@@ -103,15 +103,20 @@ const Contact = () => {
                 </span>{" "}
                 Send Message */}
                 {loading ? (
-                  <> <span><TbFidgetSpinner className="animate-spin" /></span> Loading...</>
-                ) :
-                 (<>
+                  <>
+                    {" "}
+                    <span>
+                      <TbFidgetSpinner className="animate-spin" />
+                    </span>{" "}
+                    Loading...
+                  </>
+                ) : (
+                  <>
                     <span>
                       <IoIosSend />
                     </span>
                     Send Message
                   </>
-                 
                 )}
               </button>
             </div>

@@ -15,14 +15,14 @@ import { Link } from "react-scroll";
 const About = () => {
   return (
     <div id="about" className="grid grid-cols-1 gap-6 mt-10 shadow-lg border border-[#fde047] py-3 px-4 md:grid-cols-2">
-      <div className="flex justify-center items-center p-6 md:p-10">
+      <div data-aos="fade-up" className="flex justify-center items-center p-6 md:p-10">
         <img
           className="w-96 rounded-full border-4 border-[#facc15] hover:scale-105 duration-300 hover:brightness-75"
           src="/profile-image.jpg"
           alt="Profile-image"
         />
       </div>
-      <div className="flex flex-col justify-center">
+      <div  data-aos="fade-up" className="flex flex-col justify-center">
         <p className="font-roboto text-lg mb-4">Hi, I'm Tamanna Akter Moni</p>
         <h1 className="font-roboto text-3xl font-bold">
           Junior <span className="text-[#facc15]">Frontend Developer</span>
